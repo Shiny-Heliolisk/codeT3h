@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .clearfix::after{
+            display: block;
+            content: '';
+            clear: both;
+        }
+        .wrap{
+            width: 100%;
+            margin: 0 auto;
+        }
+        .wrap nav ul{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            font-size: 24px;
+            background-color:orange;
+        }
+        .wrap li{
+            position: relative;
+        }
+        .wrap ul li{
+            float: left;
+
+        }
+        .wrap ul li a{
+            display: inline-block;
+            background-color: orange;
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            width: 150px;
+        }
+        .wrap a:hover{
+            background-color: lightgreen;
+            width: 150px;
+        }
+        .wrap .submenu{
+            /* padding: 10px; */
+            background-color: orange;
+            display: none;
+        }
+        .wrap .submenu > li > a:hover{
+            background-color: lightgreen;
+            width: 150px;
+        }
+        .wrap .submenu li{
+            float: none;
+        }
+        .wrap ul > li:hover > .submenu{
+            display: block;
+        }
+        .wrap li .submenu{
+            position: absolute;
+            left: 0;
+            top: 47px;
+            width: 150px;
+        }
+        .wrap li .submenu .submenu{
+            left: 151px;
+            top:0;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <nav>
+            <ul class="clearfix">
+                <li><a href="">thoi su</a>
+                    <ul class="submenu">
+                        <li><a href="">thoi su 1</a>
+                            <ul class="submenu">
+                                <li><a href="">thoi su 1.1</a></li>
+                                <li><a href="">thoi su 1.2</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">thoi su 2</a></li>
+                        <li><a href="">thoi su 3</a></li>
+                        <li><a href="">thoi su 4</a></li>
+                    </ul>
+                </li>
+                <li><a href="">goc nhin</a>
+                    <ul class="submenu">
+                        <li><a href="">goc nhin 1</a></li>
+                        <li><a href="">goc nhin 2</a></li>
+                        <li><a href="">goc nhin 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="">the gioi</a>
+                    <ul class="submenu">
+                        <li><a href="">the gioi 1</a></li>
+                        <li><a href=""> the gioi 2</a></li>
+                        <li><a href="">the gioi 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="">video</a></li>
+                <li><a href="">kinh doanh</a></li>
+            </ul>  
+          </nav>
+    </div>
+</body>
+</html>
